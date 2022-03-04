@@ -1,0 +1,34 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; }
+  
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+   }
+body {
+    width: 100%;
+    height: 100%; 
+}
+header{
+    width: 100%;        
+    background-color: #bd3133;
+    display: flex;
+}
+header a {
+    width: 100%;
+    font-family: "hollow";
+    color: white;
+    font-size: 5rem;
+    text-decoration: none;   
+    margin-top: -2%; 
+}
+#encabezado__logo {
+    margin: 0vw 3vw 0px 1vw;
+    width: 5%;
+    height: 60%;
+    margin: 0 2% -1.7% 20%;
+
+}
