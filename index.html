@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Japoneando es una pagina hecha por Cordobeses amantes de Japón">
+    <meta name="keywords" content="Japoneando, Japón, cultura oriental, tokio, compras, objetos orientales">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/df6bb7a0eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <title>Japoneando</title>
+</head>
+<script defer src="./js/script.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<body background="./img/11864.jpg">
+    <header>
+        <!-- Logo y boton/imagen index -->
+        <a title="encabezado" href="index.html">
+            <img src="img/logo.jpg" alt="encabezado" />Japoneando</a>
+    </header>
+    <div id="panel" class="container my-5 text-center">
+        <div class="titulo"><h2>Productos destacados:</h2></div>
+        <div class="container">
+            <div id="filtros">
+                <div id="filtro_Productos">
+                    <label>Filtrar por Categoria:</label>
+                    <form>
+                        <div class="linea"></div>
+                        <input type="radio" name="productos" class="Comidas" value="Comidas">
+                        <label>Comidas</label><br>
+                        <input type="radio" name="productos" class="Utensillos de cocina" value="Utensillos de cocina">
+                        <label>Utensillos de cocina</label><br>
+                        <input type="radio" name="productos" class="Bebidas" value="Bebidas">
+                        <label>Bebidas</label><br>
+                        <input type="radio" name="productos" class="Golosinas" value="Golosinas">
+                        <label>Golosinas</label>
+                        <button id="filtrar_Productos" class="btn btn-success">Aplicar Filtro</button>
+                    </form>
+                </div>
+                <div id="filtro_Precio">
+                    <label>Filtrar por Precio:</label>
+                    <form name="">
+                        <div class="linea"></div>
+                        <div class="min_Input"><label>Mínimo:</label></div>
+                        <input type="range" class="min_InputValue" id="slider_ValueInputMin" value="1" min="1"
+                            max="10000">
+                        <div><label class="divisa">$</label><output class="slider_Value"
+                                id="slider_ValueOutputMin">1</output></div>
+                        <div class="max_Input"><label>Máximo:</label></div>
+                        <input type="range" class="min_InputValue" id="slider_ValueInputMax" value="10000" min="1"
+                            max="10000">
+                        <div><label class="divisa">$</label><output class="slider_Value"
+                                id="slider_ValueOutputMax">10000</output></div>
+                        <button id="filtrar_Productos" class="btn btn-success">Aplicar Filtro</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-5" id="productos"></div>
+        </div>
+    </div>
+    <footer>
+        <h4>2021 - Japoneando. Todos los derechos reservados</h4>
+    </footer>
+</body>
+
+</html>
