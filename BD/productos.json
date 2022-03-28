@@ -1,0 +1,98 @@
+[
+    {
+        "Id": 1,
+        "Nombre": "Muñeco Daruma",
+        "Descripcion": "Muñeco de la fortuna Daruma",
+        "Precio": 150,
+        "Foto": "https://elsemanario.com/wp-content/uploads/2019/12/daruma_pinterest.jpg",
+        "Categoria": "Adorno"
+    },
+    {
+        "Id": 2,
+        "Nombre": "Hashi - (Palitos Chinos)",
+        "Descripcion": "Juego de palitos chinos",
+        "Precio": 300,
+        "Foto": "https://tokyo-market.fr/1733-home_default/conjunto-de-3-pares-de-palillos-japoneses-azules-hashi-seto.jpg",
+        "Categoria": "Utensillo de Cocina"
+    },
+    {
+        "Id": 3,
+        "Nombre": "Maneki-Neko",
+        "Descripcion": "Adorno gato de la fortuna japones",
+        "Precio": 500,
+        "Foto": "https://http2.mlstatic.com/D_NQ_NP_763189-CBT44611421583_012021-O.jpg",
+        "Categoria": "Adorno"
+    },
+    {
+        "Id": 4,
+        "Nombre": "Ramen Kimchi",
+        "Descripcion": "Ramen importado marca Kimchi",
+        "Precio": 600,
+        "Foto": "https://www.japonshop.com/med/img/productos/prd-ramen-coreano-nongshim-kimchi-cup-noodle-big-bol-japonshop_1.webp",
+        "Categoria": "Comida"
+    },
+    {
+        "Id": 5,
+        "Nombre": "Ramen Maruchan",
+        "Descripcion": "Ramen marca Maruchan",
+        "Precio": 500,
+        "Foto": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000010000/10853.jpg",
+        "Categoria": "Comida"
+    },
+    {
+        "Id": 6,
+        "Nombre": "Alga Nori",
+        "Descripcion": "Alga Nori marca Yaki",
+        "Precio": 500,
+        "Foto": "https://w2m3n7x8.stackpathcdn.com/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/a/l/algas-para-sushi-x-100.jpg",
+        "Categoria": "Comida"
+    },   
+    {
+        "Id": 7,
+        "Nombre": "Vaporera Arroz",
+        "Descripcion": "Vaporera para cocinar arroz",
+        "Precio": 4100,
+        "Foto": "https://d3ugyf2ht6aenh.cloudfront.net/stores/186/318/products/pasted-20210914-121734_clipped_rev_11-29dbf5e4e261b6be6b16316327176469-1024-1024.png",
+        "Categoria": "Utensillo de Cocina"
+    },
+    {
+        "Id": 8,
+        "Nombre": "Kit de Sushi",
+        "Descripcion": "Kit para hacer tu propio sushi",
+        "Precio": 2500,
+        "Foto": "https://d3ugyf2ht6aenh.cloudfront.net/stores/186/318/products/parej1-92d0f0f79f5ea2ac8d16310321659105-1024-1024.png",
+        "Categoria": "Utensillo de Cocina"
+    },
+    {
+        "Id": 9,
+        "Nombre": "Kirin Beer",
+        "Descripcion": "Cerveza Japonesa Kirin Beer",
+        "Precio": 300,
+        "Foto": "http://myanmar-brewery.com/wp-content/uploads/2019/03/kirin.png",
+        "Categoria": "Bebidas"
+    },
+    {
+        "Id": 10,
+        "Nombre": "Sake Japones",
+        "Descripcion": "Sake Japones importado - Bebida a base de arroz",
+        "Precio": 1000,
+        "Foto": "https://neodrinks.com/wp-content/uploads/2020/09/sake-japones.jpg",
+        "Categoria": "Bebidas"
+    },
+    {
+        "Id": 11,
+        "Nombre": "Poki",
+        "Descripcion": "Golosina Japonesa a base de masa dulce cubierta con chocolate",
+        "Precio": 500,
+        "Foto": "https://d3ugyf2ht6aenh.cloudfront.net/stores/186/318/products/pocky-original1-21cc0393c2ad22bb9f16450137498155-1024-1024.png",
+        "Categoria": "Golosinas"
+    },
+    {
+        "Id": 12,
+        "Nombre": "Mochi",
+        "Descripcion": "Golosina Japonesa a base de pasta dulce de arroz",
+        "Precio": 800,
+        "Foto": "https://robata.es/blog/wp-content/uploads/2017/07/mochi-robata-barcelona-1024x683.jpg",
+        "Categoria": "Golosinas"
+    }
+]

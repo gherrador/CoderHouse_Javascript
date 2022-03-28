@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Japoneando es una pagina hecha por Cordobeses amantes de Japón">
+    <meta name="keywords" content="Japoneando, Japón, cultura oriental, tokio, compras, objetos orientales">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Japoneando</title>
+</head>
+
+<body>
+    <header>
+        <a title="encabezado" href="index.html">
+            <img src="img/logo.jpg" alt="encabezado" />Japoneando</a>
+        <div class="carritoCompras">
+            <span data-toggle="tooltip" data-placement="bottom" title="0" id="contador"></span>
+        </div>
+    </header>
+    <div id="panel" class="container my-5 text-center">
+        <div class="titulo">
+            <h2>Productos destacados:</h2>
+        </div>
+        <div class="container">
+            <div id="filtros">
+                <div id="filtro_Productos">
+                    <label>Filtrar por Categoria:</label>
+                    <form id="filtroProd">
+                        <div class="linea"></div>
+                        <input type="radio" name="productos" class="Comidas" value="Comida" checked>
+                        <label>Comidas</label><br>
+                        <input type="radio" name="productos" class="utensillosCocina" value="Utensillo de Cocina">
+                        <label>Utensillos de cocina</label><br>
+                        <input type="radio" name="productos" class="bebidas" value="Bebidas">
+                        <label>Bebidas</label><br>
+                        <input type="radio" name="productos" class="golosinas" value="Golosinas">
+                        <label>Golosinas</label>
+                        <button id="filtrar_Productos" class="btn btn-success">Aplicar Filtro</button>
+                    </form>
+                </div>
+                <div id="filtro_Precio">
+                    <label>Filtrar por Precio:</label>
+                    <form name="">
+                        <div class="linea"></div>
+                        <div class="min_Input"><label>Mínimo:</label></div>
+                        <input type="range" class="min_InputValue" id="slider_ValueInputMin" value="1" min="1"
+                            max="10000">
+                        <div><label class="divisa">$</label><output class="slider_Value"
+                                id="slider_ValueOutputMin">1</output></div>
+                        <div class="max_Input"><label>Máximo:</label></div>
+                        <input type="range" class="min_InputValue" id="slider_ValueInputMax" value="10000" min="1"
+                            max="10000">
+                        <div><label class="divisa">$</label><output class="slider_Value"
+                                id="slider_ValueOutputMax">10000</output></div>
+                        <button id="filtrar_Precio" class="btn btn-success">Aplicar Filtro</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="productos"></div>
+        </div>
+    </div>
+    <div class="carritoProductos">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Accion</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footerCarrito">
+                    <th id="total" scope="row" colspan="5">Carrito Vacio</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <footer>
+        <h4>2022 - Japoneando. Todos los derechos reservados</h4>
+    </footer>
+
+    <!-- Template para generar las card de los productos -->
+    <template class="template" id="template-card">
+        <div class="col-12 mb-2 col-md-4 col-sm-4 ">
+            <div class="card">
+                <div class="card-body">
+                    <img id="fotoProducto" src="" class="card-img-top">
+                    <h5 id="tituloProducto">Titulo</h5>
+                    <p id="descripcionProducto">Descripcion</p>
+                    <p id="precioProducto">Precio</p>
+                    <button name="btnComprar" class="btn btn-success">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template para generar carrito -->
+    <template id="template-carrito">
+        <tr>
+            <th><img id="fotoProductoCarrito" src="" class="card-img-top"></th>
+            <td id="element_carrito">Nombre</td>
+            <td id="element_carrito">Descripcion</td>
+            <td id="element_carrito">Cantidad</td>
+            <td>
+                <button class="btn btn-info btn-sm">
+                    +
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td>Precio</td>
+        </tr>
+    </template>
+
+    <!-- Template para generar los valores totales del carrito -->
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total Productos</th>
+        <td></td>
+        <td>Cantidad</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">$<span>Precio total</span></td>
+    </template>
+
+    <!-- Se importan los script necesarios (Jquery, JS Bootstrap)-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script defer src="./js/main.js" type="module"></script>
+    <script defer src="./js/Productos.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="./js/Carrito.js" type="module"></script>
+</body>
+
+</html>
