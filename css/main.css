@@ -1,0 +1,327 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#contador {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 1vw;
+    position: block;   
+    margin: -10% 0 0 -20%;
+    border: 0.5vw solid transparent;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4); 
+}
+
+header {
+    width: 100%;
+    background-color: #bd3133;
+    display: flex;
+    height: 15%;
+}
+.carritoProductos{
+    display: none;
+    position: absolute;
+    top: 15%;    
+    right: 0.1%;
+    width: 50%;
+    height: auto;
+    min-height: 30%;
+    max-height: 60%;    
+    background-color: whitesmoke;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.show{
+    display: flex;
+}
+
+header a {
+    margin: -0.5% 0 0 30%;
+    font-family: "hollow";
+    color: white;
+    font-size: 6rem;
+    padding-left: 1%;
+    text-decoration: none;
+    width: 100%;
+}
+
+header a img {
+    height: auto;
+    width: 10%;
+    margin-right: 2%;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    background-color: #bd3133;
+    margin: 0.5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carritoCompras {
+    position: relative;
+    list-style: none;  
+    right: 2%;
+    top: 10%;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.carritoCompras svg#carrito {
+    width: 4vw;
+    fill: white;
+}
+
+.carritoCompras svg#carrito #cruz {
+    opacity: 0;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: translateY(-70%);
+    transform: translateY(-70%);
+    -webkit-transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+    transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+}
+
+.carritoCompras svg#carrito #centro {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    opacity: 1;
+}
+
+.carritoCompras svg#carrito #centro .st1 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.carritoCompras svg#carrito #centro .st2 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.carritoCompras svg#carrito.abierto #cruz {
+    -webkit-transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+    transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.carritoCompras svg#carrito.abierto #centro {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+.carritoCompras svg#carrito.abierto #centro .st1 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(18%);
+    transform: translateX(18%);
+}
+
+.carritoCompras svg#carrito.abierto #centro .st2 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(-18%);
+    transform: translateX(-18%);
+}
+
+#fotoProductoCarrito{
+    width: 6vw;
+    height: 4vw;
+}
+.table th{
+    font-size: 1.3rem;
+}
+#element_carrito{
+    font-size: 1.2rem;
+    padding-top: 3.5%;
+}
+
+#vaciar-carrito{
+    display: block;
+    margin: 0.5% 0 0 -10%;
+}
+
+.navbar .container-fluid {
+    padding: 0px;
+}
+
+
+header a:hover {
+    color: white;
+}
+
+footer {
+    margin-top: 5%;
+    height: auto;
+    background-color: #bd3133;
+
+}
+
+footer h4 {
+    color: white;
+    font-family: "cabin";
+    padding: 2vw 1vw 2vw 0px;
+    text-align: end;
+    font-size: 1.5rem;
+}
+
+body {
+    background-image: url("../img/11864.jpg");
+}
+
+
+.container {
+    padding-top: 0.1vw;
+    position: relative;
+}
+
+.titulo {
+    padding: 10px 0 0 20px;
+    float: left;
+    position: absolute;
+}
+
+.titulo h2 {
+    font-family: "pokesolid";
+    font-size: 3rem;
+}
+
+.card-img-top {
+    width: 10vw;
+    height: 18vw;
+    margin: 5% 0 0 0%;
+}
+
+#productos {
+    margin-top: 5.9%;
+}
+
+#panel {
+    background-color: white;
+    min-height:40vw;
+    height: auto;
+}
+
+
+#filtros {
+    width: 18%;
+    float: left;
+    margin: 5vw 0 0 1vw;
+    border: black solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#filtro_Productos,
+#filtro_Precio {
+    margin: 1vw;
+    text-align: left;
+    border-top: #DFDFDF solid 0.7px;
+}
+
+#filtro_Productos form,
+#filtro_Precio form {
+    margin: 1vw;
+}
+
+#filtro_Productos button,
+#filtro_Precio button {
+    margin: 1.5vw 0 0 2vw;
+
+}
+
+#filtro_Productos label {
+    font-size: 1.5rem;
+    margin: 0.3vw;
+}
+
+.slider_Value {
+    font-size: 1.5rem;
+}
+
+#filtrar_Productos {
+    margin: 1vw
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.min_Input,
+.max-Input,
+label {
+    font-size: 1.5rem;
+}
+
+.max_InputValue,
+.min_InputValue {
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.max_InputValue:hover,
+.min_InputValue:hover {
+    opacity: 1;
+}
+
+.min_InputValue::-webkit-slider-thumb,
+.max_InputValue::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: black;
+    cursor: ew-resize;
+}
+
+.min_InputValue::-moz-range-thumb,
+.max_InputValue::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: black;
+    cursor: ew-resize;
+}
+
+.divisa {
+    font-size: 1.5rem;
+
+}
