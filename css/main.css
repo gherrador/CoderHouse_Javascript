@@ -1,0 +1,767 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/11864.jpg");
+
+}
+
+.contador {
+    display: flex;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 1vw;
+    position: block;
+    margin: -10% 0 0 -20%;
+    border: 0.5vw solid transparent;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+header {
+    width: 100%;
+    background-color: #bd3133;
+    display: flex;
+    height: 15%;
+}
+
+.carritoProductos {
+    display: none;
+    position: absolute;
+    top: 15%;
+    right: 0.1%;
+    width: 50%;
+    height: auto;
+    min-height: 30%;
+    max-height: 60%;
+    background-color: whitesmoke;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.carritoOrdenes {
+    position: relative;
+    width: 50%;
+    height: 30%;
+    min-height: 30%;
+    max-height: 60%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 10% 0 0 2%;
+}
+
+.containertarjeta {
+    margin: 10% 0 0 5%;
+    width: 40%;
+}
+
+
+
+.todo {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+
+}
+
+
+.show {
+    display: flex;
+}
+
+header a {
+    margin: -0.7% 0 0 30%;
+    font-family: "hollow";
+    color: white;
+    font-size: 6rem;
+    padding-left: 1%;
+    text-decoration: none;
+    width: 100%;
+}
+
+header a img {
+    height: auto;
+    width: 8%;
+    margin: -0.8% 2% 0 0;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    background-color: #bd3133;
+    margin: 0.5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carritoCompras {
+    position: relative;
+    list-style: none;
+    right: 2%;
+    top: 10%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.carritoCompras svg#carrito {
+    width: 4vw;
+    fill: white;
+}
+
+.carritoCompras svg#carrito #cruz {
+    opacity: 0;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: translateY(-70%);
+    transform: translateY(-70%);
+    -webkit-transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+    transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+}
+
+.carritoCompras svg#carrito #centro {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    opacity: 1;
+}
+
+.carritoCompras svg#carrito #centro .st1 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.carritoCompras svg#carrito #centro .st2 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.carritoCompras svg#carrito.abierto #cruz {
+    -webkit-transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+    transition: all 0.2s cubic-bezier(0.73, 0.19, 0.59, 1.3);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.carritoCompras svg#carrito.abierto #centro {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+.carritoCompras svg#carrito.abierto #centro .st1 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(18%);
+    transform: translateX(18%);
+}
+
+.carritoCompras svg#carrito.abierto #centro .st2 {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(-18%);
+    transform: translateX(-18%);
+}
+
+#fotoProductoCarrito {
+    width: 6vw;
+    height: 4vw;
+}
+
+.table td img {
+    width: 6vw;
+    height: 4vw;
+}
+
+.table td {
+    font-size: 1.3rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table tr th {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-left: 10%;
+}
+
+#element_carrito {
+    font-size: 1.2rem;
+    padding-top: 3.5%;
+}
+
+#vaciar-carrito {
+    display: block;
+    margin: 0.5% 0 0 -10%;
+}
+
+.navbar .container-fluid {
+    padding: 0px;
+}
+
+
+header a:hover {
+    color: white;
+}
+
+footer {
+    margin-top: 5%;
+    height: auto;
+    background-color: #bd3133;
+
+}
+
+footer h4 {
+    color: white;
+    font-family: "cabin";
+    padding: 2vw 1vw 2vw 0px;
+    text-align: end;
+    font-size: 1.5rem;
+}
+
+.container {
+    padding-top: 0.1vw;
+    position: relative;
+}
+
+.titulo {
+    padding: 10px 0 0 20px;
+    float: left;
+    position: absolute;
+}
+
+.titulo h2 {
+    font-family: "pokesolid";
+    font-size: 3rem;
+}
+
+.card-img-top {
+    width: 10vw;
+    height: 18vw;
+    margin: 5% 0 0 0%;
+}
+
+#productos {
+    margin-top: 5.9%;
+}
+
+#panel {
+    background-color: white;
+    min-height: 40vw;
+    height: auto;
+}
+
+
+#filtros {
+    width: 18%;
+    float: left;
+    margin: 5vw 0 0 1vw;
+    border: black solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#filtro_Productos,
+#filtro_Precio {
+    margin: 1vw;
+    text-align: left;
+    border-top: #DFDFDF solid 0.7px;
+}
+
+#filtro_Productos form,
+#filtro_Precio form {
+    margin: 1vw;
+}
+
+#filtro_Productos button,
+#filtro_Precio button {
+    margin: 1.5vw 0 0 2vw;
+
+}
+
+#filtro_Productos label {
+    font-size: 1.5rem;
+    margin: 0.3vw;
+}
+
+#slider_valueMin,
+#slider_valueMax {
+    font-size: 1.5rem;
+}
+
+.divisa {
+    font-size: 1.5rem;
+}
+
+#filtrar_Productos {
+    margin: 1vw
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.min_Input,
+.max-Input,
+label {
+    font-size: 1.5rem;
+}
+
+#sliderMax,
+#sliderMin {
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#sliderMax:hover,
+#sliderMin:hover {
+    opacity: 1;
+}
+
+#sliderMax::-webkit-slider-thumb,
+#sliderMin::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: black;
+    cursor: ew-resize;
+}
+
+#sliderMax::-moz-range-thumb,
+#sliderMin::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: black;
+    cursor: ew-resize;
+}
+
+.divisa {
+    font-size: 1.5rem;
+
+}
+
+
+.contenedor {
+    width: 100%;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ---------- Estilos Generales de las Tarjetas ----------*/
+.tarjeta {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #fff;
+    transition: .3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tarjeta.active {
+    transform: rotateY(180deg);
+}
+
+.tarjeta>div {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+/* ---------- Tarjeta Delantera ----------*/
+
+.tarjeta .delantera {
+    width: 100%;
+    background: url(../img/bg-tarjeta/bg-tarjeta-02.jpg);
+    background-size: cover;
+}
+
+.delantera .logo-marca {
+    text-align: right;
+    min-height: 50px;
+}
+
+.delantera .logo-marca img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+}
+
+.delantera .chip {
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.delantera .grupo .label {
+    font-size: 16px;
+    color: #7d8994;
+    margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+
+.delantera .grupo .expiracion {
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.delantera .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#nombre{
+    font-size: 2rem;
+}
+
+/* ---------- Tarjeta Trasera ----------*/
+.trasera {
+    background: url(../img/bg-tarjeta/bg-tarjeta-02.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    width: 100%;
+}
+
+.trasera .barra-magnetica {
+    height: 40px;
+    background: #000;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.trasera .datos {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trasera .datos p {
+    margin-bottom: 5px;
+}
+
+.trasera .datos #firma {
+    width: 70%;
+}
+
+.trasera .datos #firma .firma {
+    height: 40px;
+    background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+
+.trasera .datos #firma .firma p {
+    line-height: 40px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: #000;
+    font-size: 30px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.trasera .datos #ccv {
+    width: 30%;
+}
+
+.trasera .datos #ccv .ccv {
+    background: #fff;
+    height: 40px;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.trasera .leyenda {
+    font-size: 14px;
+    line-height: 50px;
+
+}
+
+
+/* ---------- Contenedor Boton ----------*/
+.contenedor-btn .btn-abrir-formulario {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: #2364d2;
+    color: #fff;
+    position: relative;
+    left: 48%;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4);
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor-btn .btn-abrir-formulario:hover {
+    background: #1850b1;
+}
+
+.contenedor-btn .btn-abrir-formulario.active {
+    transform: rotate(45deg);
+}
+
+/* ---------- Formulario Tarjeta ----------*/
+.formulario-tarjeta {
+    background: #fff;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+
+.formulario-tarjeta.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+    display: block;
+    color: #7d8994;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+    border: 2px solid #CED6E0;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+    border: 2px solid #93BDED;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+    outline: rgb(4, 4, 4);
+    box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+
+.formulario-tarjeta input {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+    width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+    min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.formulario-tarjeta select {
+    -webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+    position: absolute;
+    color: #CED6E0;
+    top: 18px;
+    right: 15px;
+    transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+    color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+    border: none;
+    padding: 10px;
+    font-size: 22px;
+    color: #fff;
+    background: #2364d2;
+    box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
+    cursor: pointer;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+    background: #1850b1;
+}
+
+#total-orden {
+    margin-bottom: 5%;
+    font-style: italic;
+}
+
+.nota {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+#cartel-final {
+    background-color: white;
+    margin-top: 5%;
+    width: 70%;
+}
+
+#cartel-final div {
+    margin-top: 5%;
+}
+
+#cartel-final h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 3%;
+}
+
+#cartel-final h3 {
+    font-size: 4rem;
+    text-align: center;
+    vertical-align: middle;
+    margin: 3%;
+}
+
+#cartel-final img {
+    display: block;
+    margin: auto;
+    width: 30%;
+    padding-bottom: 1%;
+}
+
+#carritoVacio {
+    font-size: 3rem;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    padding-top: 8%;    
+    font-family: "hollow";
+}
+
+#finalizar-compra,
+#vaciar-carrito {
+    width: 100%;
+    align-items: center;
+
+}
+
+#btn-acciones-carrito tr td {
+    padding-top: 3%;
+}
+
+#mybtn, #filtrar_Precio, #filtrar_Productos {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+#vaciar-carrito {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: linear-gradient(90deg, rgba(249,71,71,1) 0%, rgba(177,0,0,1) 100%, rgba(255,0,0,1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 0, 0, 0.8);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    margin-top: -12%;
+}
+
+#finalizar-compra {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: rgb(135,255,51);
+    background: linear-gradient(63deg, rgba(135,255,51,1) 0%, rgba(0,142,18,1) 100%);    
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(1, 69, 0, 0.8);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+#productos h5{
+    font-size: 1.6rem;
+    font-family: 'oswald';
+    font-weight: bold;
+}
+
+#productos p{
+    font-size: 1.3rem;
+    font-family: 'cabin';
+}
+
+
