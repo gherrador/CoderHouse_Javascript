@@ -13,21 +13,6 @@ $(document).ready(async () => {
   }
 })
 
-
-//Al hacer click sobre el nombre, se regresa a la pagina principal,se evita que la pagina recargue//
-// y los botones de filtro y texto vuelven a la normalidad.//
-$(".nombre").on("click", async (e) => {
-  try {
-    e.preventDefault()
-    $('#filtrar_Productos').text('Aplicar Filtro').removeClass().addClass('verde')
-    $('#filtrar_Precio').text('Aplicar Filtro').removeClass().addClass('verde')
-    const data = await loadProducts()
-    renderCard(data)
-    $('#titulo_productos').html(`<h2>Productos Destacados:</h>`)
-  } catch (err) {
-    console.error("la pagina no se cargo correctamente", err)
-  }
-});
 //Por cada producto(objeto) en el archivo JSON, dibuja la tarjeta con los datos del objeto producto.
 export const renderCard = (data) => {
   $('#productos').html('')
