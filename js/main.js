@@ -19,8 +19,8 @@ $(document).ready(async () => {
 $(".nombre").on("click", async (e) => {
   try {
     e.preventDefault()
-    $('#filtrar_Productos').text('Aplicar Filtro').removeClass().addClass('btn btn-success')
-    $('#filtrar_Precio').text('Aplicar Filtro').removeClass().addClass('btn btn-success')
+    $('#filtrar_Productos').text('Aplicar Filtro').removeClass().addClass('verde')
+    $('#filtrar_Precio').text('Aplicar Filtro').removeClass().addClass('verde')
     const data = await loadProducts()
     renderCard(data)
     $('#titulo_productos').html(`<h2>Productos Destacados:</h>`)
