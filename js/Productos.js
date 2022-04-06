@@ -11,6 +11,21 @@ export const loadProducts = async () => {
     }
 }
 
+//Al hacer click sobre el nombre, se regresa a la pagina principal,se evita que la pagina recargue//
+// y los botones de filtro y texto vuelven a la normalidad.//
+$(".nombre").on("click", async (e) => {
+    try {
+        $('#filtrar_Productos').text('Aplicar Filtro').removeClass().addClass('verde') && eliminarFiltro()
+        $('#filtrar_Precio').text('Aplicar Filtro').removeClass().addClass('verde') && eliminarFiltroPrecio()
+        e.preventDefault()
+        const data = await loadProducts()
+        renderCard(data)
+        $('#titulo_productos').html(`<h2>Productos Destacados:</h>`)
+    } catch (err) {
+        console.error("la pagina no se cargo correctamente", err)
+    }
+});
+
 //Al apretar sobre el boton filtrado, cambiara la clase del boton y su css (rojo para eliminar filtro y verde para aplicar filtro)
 $('#filtrar_Productos').on('click', e => {
     try {
