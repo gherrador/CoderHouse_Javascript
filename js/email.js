@@ -23,10 +23,10 @@ export const enviarMail = (Orden) => {
       imagen:  `<img src=https://drive.google.com/uc?export=donwload&id=1vtGNg8p-lAMut2ckEDXJF9Orp-mFSCXz style="width: 450px; height: 100px; margin-left: 20px"></img>`
       })
     .then(function(response) {
-      //En caso de exito al mandar correo, muestro "SUCCESS"
+      //En caso de exito al mandar correo, muestro por consola "SUCCESS"
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
-      //En caso de exito al mandar correo, muestro "FAILED"
+      //En caso de falla al mandar correo, muestro por consola "FAILED"
        console.error('FAILED...', error);
     });    
     
